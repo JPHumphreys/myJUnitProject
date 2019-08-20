@@ -5,6 +5,11 @@ public class Player {
     private int score;
     private boolean deal;
 
+    Player()
+    {
+
+    }
+
     Player(int score1, int score2)
     {
         this.score += score1;
@@ -48,18 +53,21 @@ public class Player {
 
     public static String winnerQuery(int playerScore, int dealerScore)
     {
+        String returningString = " ";
         if(playerScore > dealerScore)
         {
-            return "Player wins with a score of : " + playerScore;
+            returningString =  "Player wins";
         }
-        if(playerScore == dealerScore)
+        else if(playerScore == dealerScore)
         {
-            return "Player and dealer draw with a score of : " + playerScore;
+            returningString =  "Player and dealer draw";
         }
         else
         {
-            return "Dealer wins with a score of : " + dealerScore;
+            returningString =  "Dealer wins";
         }
+
+        return returningString;
     }
 
 }

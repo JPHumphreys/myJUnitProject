@@ -15,7 +15,8 @@ public class AppTest
     public void mainTest()
     {
         app = new App();
-        app.returnInput("Henlo", "WOW");
+        String newString = app.returnInput("Henlo", "WOW");
+        assertTrue(newString, newString == "Henlo" || newString == "WOW");
     }
 
     /**

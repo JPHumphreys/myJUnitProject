@@ -7,13 +7,14 @@ public class Player {
 
     Player()
     {
-
+        deal = true;
     }
 
     Player(int score1, int score2)
     {
         this.score += score1;
         this.score += score2;
+        deal = true;
     }
 
     public int getScore()
@@ -33,6 +34,11 @@ public class Player {
     public boolean getDealState()
     {
         return deal;
+    }
+
+    public void setDealState()
+    {
+        this.deal = false;
     }
 
     public void dealCards(int score)
@@ -65,6 +71,25 @@ public class Player {
         else
         {
             returningString =  "Dealer wins";
+        }
+
+        return returningString;
+    }
+
+    public static String winnerQuery2(int playerScore, int dealerScore)
+    {
+        String returningString = " ";
+        if(playerScore > dealerScore)
+        {
+            returningString =  "Player wins with a score of " + playerScore + "compared to : " + dealerScore;
+        }
+        else if(playerScore == dealerScore)
+        {
+            returningString =  "Player and dealer draw";
+        }
+        else
+        {
+            returningString =  "Dealer wins with a score of " + dealerScore + "compared to : " + playerScore;
         }
 
         return returningString;

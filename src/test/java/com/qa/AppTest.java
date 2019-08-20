@@ -23,6 +23,8 @@ public class AppTest
         assertEquals(Player.winnerQuery(18,18), "Player and dealer draw");
         assertEquals(Player.winnerQuery(21,18), "Player wins");
 
+
+
     }
 
     /**

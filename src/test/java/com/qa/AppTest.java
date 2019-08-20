@@ -15,8 +15,7 @@ public class AppTest
     public void mainTest()
     {
         app = new App();
-        String[] input = new String[]{"a"};
-        app.main(input);
+        app.returnInput("Henlo", "WOW");
     }
 
     /**
